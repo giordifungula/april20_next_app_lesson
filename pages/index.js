@@ -1,15 +1,13 @@
 import Head from 'next/head'
-
 const GoogleTrack = () => {
   return{
     __html: `
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-164499987-1');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-164511997-1');
+    
     `
   }
 }
@@ -20,10 +18,9 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164511997-1"></script>
         <script dangerouslySetInnerHTML={GoogleTrack}></script>
-        <script dangerouslySetInnerHTML="https://www.googletagmanager.com/gtag/js?id=UA-164499987-1"></script>
       </Head>
-
       <main>
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js! 😁</a>
@@ -31,7 +28,6 @@ export default function Home() {
 
         <p className="description">
           Get started by editing <code>pages/index.js</code>
-          
         </p>
         <h3>Giordi NExt Test for Lessons</h3>
         <div className="grid">
