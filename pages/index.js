@@ -1,11 +1,27 @@
 import Head from 'next/head'
 
+const GoogleTrack = () => {
+  return{
+    __html: `
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164499987-1');
+    `
+  }
+}
+
 export default function Home() {
   return (
     <div className="container">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <script dangerouslySetInnerHTML={GoogleTrack}></script>
+        <script dangerouslySetInnerHTML="https://www.googletagmanager.com/gtag/js?id=UA-164499987-1"></script>
       </Head>
 
       <main>
