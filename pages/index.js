@@ -5,11 +5,22 @@ const GoogleTrack = () => {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'UA-164511997-1');
-    
     `
   }
+}
+
+function createMarkup() {
+  return {__html: `
+  window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-164511997-1');
+  `};
+}
+
+function MyComponent() {
+  return <div dangerouslySetInnerHTML={createMarkup()} />;
 }
 
 export default function Home() {
@@ -18,8 +29,8 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164511997-1"></script>
-        <script dangerouslySetInnerHTML={GoogleTrack}></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164492039-1"></script>
+        <script dangerouslySetInnerHTML={GoogleTrack()}></script>
       </Head>
       <main>
         <h1 className="title">
